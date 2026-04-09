@@ -1,0 +1,35 @@
+{
+  "name": "nekte-ts",
+  "private": true,
+  "description": "NEKTE TypeScript SDK — Client and server packages",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nekte-protocol/nekte-ts"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel dev",
+    "test": "pnpm -r test",
+    "lint": "eslint packages/*/src/**/*.ts",
+    "format": "prettier --write packages/*/src/**/*.ts",
+    "format:check": "prettier --check packages/*/src/**/*.ts",
+    "clean": "pnpm -r clean",
+    "demo": "tsx demo/two-agents/run.ts",
+    "benchmark": "tsx benchmarks/src/cli.ts",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "hdr-histogram-js": "^3.0.1",
+    "js-tiktoken": "^1.0.21",
+    "prettier": "^3.8.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
